@@ -18,9 +18,7 @@ A beautiful and intuitive note-taking application built with React and Vite. Cap
 
 ## 🚀 Demo
 
-> *Add screenshots or GIF demos of your app here*
-
-![Keeper App Demo](demo-screenshot.png)
+> *Coming soon*
 
 ## 🛠️ Built With
 
