@@ -4,8 +4,13 @@
 ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![Netlify](https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)
 
 A beautiful and intuitive note-taking application built with React and Vite. Capture your thoughts, ideas, and reminders with ease!
+
+## 🌐 Live Demo
+
+**[🚀 Try it live on Netlify!](https://stupendous-treacle-9f774e.netlify.app)**
 
 ## ✨ Features
 
@@ -16,15 +21,13 @@ A beautiful and intuitive note-taking application built with React and Vite. Cap
 - 📱 **Responsive Design**: Works seamlessly on desktop and mobile devices
 - 🔄 **Real-time Updates**: Instant note management without page refreshes
 
-## 🚀 Demo
-
-> *Coming soon*
-
-## 🛠️ Built With
+## ️ Built With
 
 - **[React](https://reactjs.org/)** - Frontend framework for building user interfaces
 - **[Vite](https://vitejs.dev/)** - Next generation frontend tooling
+- **[Material-UI](https://mui.com/)** - React components for faster development
 - **[CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS)** - Styling and animations
+- **[Netlify](https://netlify.com/)** - Deployment and hosting
 - **[pnpm](https://pnpm.io/)** - Fast, disk space efficient package manager
 
 ## 📁 Project Structure
@@ -55,7 +58,7 @@ keeper-app/
 Make sure you have the following installed on your machine:
 
 - [Node.js](https://nodejs.org/) (version 16 or higher)
-- [pnpm](https://pnpm.io/) (recommended) or npm
+- [npm](https://www.npmjs.com/) or [pnpm](https://pnpm.io/) (recommended)
 
 ### Installation
 
@@ -65,32 +68,69 @@ Make sure you have the following installed on your machine:
    cd Keeper-App
    ```
 
-2. **Install dependencies**
+2. **Navigate to frontend directory**
    ```bash
-   pnpm install
-   # or
+   cd frontend
+   ```
+
+3. **Install dependencies**
+   ```bash
    npm install
-   ```
-
-3. **Start the development server**
-   ```bash
-   pnpm dev
    # or
-   npm run dev
+   pnpm install
    ```
 
-4. **Open your browser**
+4. **Start the development server**
+   ```bash
+   npm run dev
+   # or
+   pnpm dev
+   ```
+
+5. **Open your browser**
    
    Navigate to `http://localhost:5173` to see the app running!
 
+## 🌐 Deployment
+
+This app is automatically deployed to Netlify from the main branch.
+
+### Deployment Configuration
+
+The project includes a `netlify.toml` file with the following settings:
+```toml
+[build]
+  base = "frontend"
+  command = "npm run build"
+  publish = "dist"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+```
+
+### Manual Deployment
+
+To deploy your own version:
+
+1. **Build the project**
+   ```bash
+   cd frontend
+   npm run build
+   ```
+
+2. **Deploy to Netlify**
+   - Drag and drop the `dist` folder to [Netlify](https://netlify.com)
+   - Or connect your GitHub repository for automatic deployments
+
 ## 📜 Available Scripts
 
-In the project directory, you can run:
+In the frontend directory, you can run:
 
-- `pnpm dev` - Runs the app in development mode
-- `pnpm build` - Builds the app for production
-- `pnpm preview` - Preview the production build locally
-- `pnpm lint` - Run ESLint to check for code issues
+- `npm run dev` - Runs the app in development mode
+- `npm run build` - Builds the app for production  
+- `npm run preview` - Preview the production build locally
 
 ## 🎯 Usage
 
@@ -118,13 +158,22 @@ Contributions are what make the open source community such an amazing place to l
 ## 📝 Future Enhancements
 
 - [ ] 🔍 Search functionality
-- [ ] 🏷️ Tags and categories
+- [ ] 🏷️ Tags and categories  
 - [ ] 🌙 Dark mode toggle
-- [ ] 💾 Local storage persistence
+- [ ] 💾 Database integration for persistent storage
+- [ ] 👤 User authentication and accounts
 - [ ] 📤 Export notes functionality
 - [ ] 🔔 Reminder notifications
 - [ ] 🎨 Customizable themes
 - [ ] 📱 PWA support
+- [ ] 🔄 Real-time sync across devices
+
+## 🚀 Current Status
+
+✅ **Deployed** - Live at https://stupendous-treacle-9f774e.netlify.app  
+✅ **Responsive Design** - Works on all devices  
+✅ **Fast Performance** - Built with Vite  
+⏳ **Database Integration** - Coming soon for persistent notes
 
 ## 📄 License
 
